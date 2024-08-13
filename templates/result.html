@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Result</title>
 </head>
 <body>
-    <h2>this show result</h2>
-    {% if result>50 %}
-        <h1>you pass</h1>
+    <h1>Result</h1>
+    <p>Your score is: {{ result.score }}</p>
+    <p>You have: {{ result.res }}</p>
+    
+    {% if result.score > 50 %}
+        <p>Congratulations, you passed!</p>
     {% else %}
-        <h1>you fail</h1>
-        <!-- #this is used to cloased if condition -->
+        <p>Unfortunately, you failed.</p>
     {% endif %}
 </body>
 </html>
